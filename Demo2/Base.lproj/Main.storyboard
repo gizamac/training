@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9o-uJ-j5l">
+                                <rect key="frame" x="110" y="215" width="79" height="22"/>
+                                <state key="normal" title="Click Test"/>
+                                <connections>
+                                    <action selector="btnOneClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhs-hS-4B4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XV-m9-cVU">
+                                <rect key="frame" x="98" y="257" width="88" height="30"/>
+                                <state key="normal" title="Go To Page2"/>
+                                <connections>
+                                    <segue destination="OO5-T3-4J6" kind="show" identifier="segueOne" id="Trr-3S-jzJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qS-Gq-HmP">
+                                <rect key="frame" x="98" y="295" width="92" height="30"/>
+                                <state key="normal" title="Go To Page 3"/>
+                                <connections>
+                                    <segue destination="Jew-ap-vaY" kind="presentation" identifier="segueTwo" modalTransitionStyle="partialCurl" id="WH6-cG-4vX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-mX-aXf">
+                                <rect key="frame" x="52" y="6" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnOne" destination="m9o-uJ-j5l" id="qZ6-nj-Ji2"/>
+                        <outlet property="lblName" destination="YKs-mX-aXf" id="fVt-pi-fVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-227"/>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="nJI-IZ-wqp">
+            <objects>
+                <viewController id="OO5-T3-4J6" customClass="Page2ViewController" customModule="Demo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ata-np-GaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="rAw-u8-98J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gfx-D1-xyF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-sX-WoN">
+                                <rect key="frame" x="64" y="401" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onBtnClose:" destination="OO5-T3-4J6" eventType="touchUpInside" id="y6Y-yi-Dt5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter email here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ss-GI-YNK">
+                                <rect key="frame" x="35" y="72" width="216" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="EndOfEmail:" destination="OO5-T3-4J6" eventType="editingDidEndOnExit" id="USB-Td-rkb"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsl-6n-oSY">
+                                <rect key="frame" x="42" y="142" width="33" height="30"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="btnAlert:" destination="OO5-T3-4J6" eventType="touchUpInside" id="rV7-fi-ODG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hug-8z-A4f">
+                                <rect key="frame" x="38" y="195" width="40" height="30"/>
+                                <state key="normal" title="Sheet"/>
+                                <connections>
+                                    <action selector="doBtnAcitonSheet:" destination="OO5-T3-4J6" eventType="touchUpInside" id="sqZ-9K-caC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="6Ss-GI-YNK" id="939-zu-pcv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAF-5T-gYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="-239"/>
+        </scene>
+        <!--Page3 View Controller-->
+        <scene sceneID="feW-Mt-CiA">
+            <objects>
+                <viewController id="Jew-ap-vaY" customClass="Page3ViewController" customModule="Demo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vML-bq-8KX"/>
+                        <viewControllerLayoutGuide type="bottom" id="G1Z-NE-UzK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P8h-z5-zfb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEV-WH-MWv">
+                                <rect key="frame" x="53" y="483" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onBtnClose:" destination="Jew-ap-vaY" eventType="touchUpInside" id="j6T-aJ-AtV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcv-Td-ujJ">
+                                <rect key="frame" x="40" y="148" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fi-Lr-SWS">
+                                <rect key="frame" x="40" y="284" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UtM-fp-B0m">
+                                <rect key="frame" x="40" y="12" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="images" destination="UtM-fp-B0m" collectionClass="NSMutableArray" id="fS0-fu-RYA"/>
+                        <outletCollection property="images" destination="Xcv-Td-ujJ" collectionClass="NSMutableArray" id="KIx-NM-Xkl"/>
+                        <outletCollection property="images" destination="3Fi-Lr-SWS" collectionClass="NSMutableArray" id="a0A-R8-Gel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="go4-av-xP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="412"/>
+        </scene>
+    </scenes>
+</document>
